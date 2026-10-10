@@ -7,12 +7,15 @@ import { MaintenanceConfig, PageConfig, WorkerConfig } from './types/config'
 
 const pageConfig: PageConfig = {
   // Title for your status page
-  title: "lyc8503's Status Page",
+  title: "Kami Machine Status 🏭 Live Uptime & Service Monitoring",
+  description: 'Real-time status page for KamiMachine. Check live uptime, incident history, and maintenance updates for all our services',
   // Links shown at the header of your status page, could set `highlight` to `true`
   links: [
-    { link: 'https://github.com/lyc8503', label: 'GitHub' },
-    { link: 'https://blog.lyc8503.net/', label: 'Blog' },
-    { link: 'mailto:me@lyc8503.net', label: 'Email Me', highlight: true },
+    { link: 'https://kamimachine.com', label: 'Kami Machine', highlight: true },
+    { link: 'https://komestudio.com/', label: 'Kome Studio' },
+    { link: 'https://kome.top', label: 'Kome.Top' },
+    { link: 'https://komeverse.com/', label: 'KomeVerse' },
+    { link: 'mailto:hi@kamimachine.com', label: 'Email Me', highlight: true },
   ],
 }
 
@@ -97,7 +100,7 @@ const workerConfig: WorkerConfig = {
       timeout: 10000,
     },
     // [Optional] timezone used in notification messages, default to "Etc/GMT"
-    timeZone: 'Asia/Shanghai',
+    timeZone: 'Asia/­Ho_Chi_Minh',
     // [Optional] grace period in minutes before sending a notification
     // notification will be sent only if the monitor is down for N continuous checks after the initial failure
     // if not specified, notification will be sent immediately
