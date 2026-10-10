@@ -1,4 +1,4 @@
-name = "uptimeflare"
+name = "uptime"
 compatibility_date = "2025-04-02"
 compatibility_flags = [ "nodejs_compat" ]
 
