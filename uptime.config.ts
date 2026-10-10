@@ -8,7 +8,6 @@ import { MaintenanceConfig, PageConfig, WorkerConfig } from './types/config'
 const pageConfig: PageConfig = {
   // Title for your status page
   title: "Kami Machine Status 🏭 Live Uptime & Service Monitoring",
-  description: 'Real-time status page for KamiMachine. Check live uptime, incident history, and maintenance updates for all our services',
   // Links shown at the header of your status page, could set `highlight` to `true`
   links: [
     { link: 'https://kamimachine.com', label: 'Kami Machine', highlight: true },
