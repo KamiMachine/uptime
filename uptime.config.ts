@@ -16,6 +16,15 @@ const pageConfig: PageConfig = {
     { link: 'https://komeverse.com', label: 'KomeVerse' },
     // { link: 'mailto:hi@kamimachine.com', label: 'Email Me', highlight: true },
   ],
+  group: {
+    '🌐 Public (example group name)': ['komestudio', 'kamimachine', 'kometop'],
+    '🔐 Private': ['test_tcp_monitor'],
+  },
+  maintenances: {
+    // [OPTIONAL] The color of upcoming maintenance alerts, default to 'gray'
+    // Active alerts will always use the color specified in the MaintenanceConfig
+    upcomingColor: 'gray',
+  },
 }
 
 const workerConfig: WorkerConfig = {
@@ -24,9 +33,9 @@ const workerConfig: WorkerConfig = {
     // Example HTTP Monitor
     {
       // `id` should be unique, history will be kept if the `id` remains constant
-      id: 'foo_monitor',
+      id: 'komestudio',
       // `name` is used at status page and callback message
-      name: 'My API Monitor',
+      name: 'Kome Studio',
       // `method` should be a valid HTTP Method
       method: 'GET',
       // `target` is a valid URL
@@ -56,6 +65,34 @@ const workerConfig: WorkerConfig = {
       // checkProxy: 'worker://weur',
       // [OPTIONAL] if true, the check will fallback to local if the specified proxy is down
       // checkProxyFallback: true,
+    },
+    {
+      id: 'kamimachine',
+      name: 'Kami Machine',
+      method: 'GET',
+      target: 'https://kamimachine.com',
+      tooltip: 'Kami Machine',
+      statusPageLink: 'https://kamimachine.com',
+      expectedCodes: [200],
+      timeout: 10000,
+      headers: {
+        'User-Agent': 'Uptimeflare',
+        Authorization: 'Bearer YOUR_TOKEN_HERE',
+      },
+    },
+    {
+      id: 'kometop',
+      name: 'Kome Top',
+      method: 'GET',
+      target: 'https://kome.top',
+      tooltip: 'Kami Machine',
+      statusPageLink: 'https://kome.top',
+      expectedCodes: [200],
+      timeout: 10000,
+      headers: {
+        'User-Agent': 'Uptimeflare',
+        Authorization: 'Bearer YOUR_TOKEN_HERE',
+      },
     },
     // Example TCP Monitor
     {
@@ -117,7 +154,7 @@ const workerConfig: WorkerConfig = {
 const maintenances: MaintenanceConfig[] = [
   {
     // [Optional] Monitor IDs to be affected by this maintenance
-    monitors: ['foo_monitor', 'bar_monitor'],
+    monitors: ['komestudio', 'bar_monitor'],
     // [Optional] default to "Scheduled Maintenance" if not specified
     title: 'Test Maintenance',
     // Description of the maintenance, will be shown at status page
