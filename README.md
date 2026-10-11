@@ -3,88 +3,121 @@
   <a title="简体中文" href="README_zh-CN.md"><img src="https://img.shields.io/badge/-%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-545759?style=for-the-badge" alt="简体中文"></a>
 </div>
 
-# ✔[UptimeFlare](https://github.com/lyc8503/UptimeFlare)
+# KomeStudio & KamiMachine — Status Page
 
-A more advanced, serverless, and free uptime monitoring & status page solution, powered by Cloudflare Workers, complete with a user-friendly interface.
+> Live uptime monitoring, incident history, and service health for **komestudio.com** and **kamimachine.com**.
 
-📢 **[[SECURITY ADVISORY](https://github.com/lyc8503/UptimeFlare/security/advisories/GHSA-36q9-v7p3-vj6v) 2026/03/04]** A vulnerability (CVE-2026-29779) that could expose monitor configuration and credentials in `uptime.config.ts` to clients was fixed. Versions between 2025-09-21 (from commit `41257c6`) and 2026-03-04 are affected. **Affected users are strongly advised to upgrade to the latest version.**
+[![Uptime](https://img.shields.io/badge/uptime-99.9%25-brightgreen)](https://status.komestudio.com)
+[![Status](https://img.shields.io/badge/status-operational-success)](https://status.kamimachine.com)
+[![Powered by](https://img.shields.io/badge/powered%20by-UptimeFlare-blue)](https://github.com/lyc8503/UptimeFlare)
+[![Deployed on](https://img.shields.io/badge/deployed%20on-Cloudflare%20Workers-orange)](https://workers.cloudflare.com/)
 
-🎉 **[UPDATE 2026/01/03]** I have just migrated UptimeFlare from KV to D1 Database. I also updated the Terraform Cloudflare provider to v5 and improved the deployment process. The data structure has been optimized to resolve long-standing performance issues.
+---
 
-New users can deploy directly, while existing users can have a simple auto migration process (upgrade docs below)! Feel free to open an issue if you run into any trouble deploying.
+## 🌐 Live Status Pages
 
-## ⭐Features
+| Service | Status Page | Description |
+|---|---|---|
+| **KomeStudio** | [status.komestudio.com](https://status.komestudio.com) | Status page for KomeStudio services |
+| **KamiMachine** | [status.kamimachine.com](https://status.kamimachine.com) | Status page for KamiMachine services |
 
-- Open-source, easy to deploy (in under 10 minutes, no local tools required), and free
-- Monitoring capabilities
-  - Up to 50 checks at 1-minute intervals
-  - Geo-specific checks from over [310 cities](https://www.cloudflare.com/network/) worldwide
-  - Support for HTTP/HTTPS/TCP port monitoring
-  - Up to 90-day uptime history and uptime percentage tracking
-  - Customizable request methods, headers, and body for HTTP(s)
-  - Custom status code & keyword checks for HTTP(s)
-  - Downtime notification supporting [100+ notification channels](https://github.com/caronc/apprise/wiki)
-  - Customizable Webhook
-  - Multi-language support (English/Chinese)
-- Status page
-  - Interactive ping (response time) chart for all types of monitors
-  - Scheduled maintenances alerts & Incident history page
-  - Responsive UI that adapts to your system theme
-  - Customizable status page
-  - Use your own domain with CNAME
-  - Optional password authentication (private status page)
-  - JSON API for fetching realtime status data
+Check real-time uptime, incident reports, and scheduled maintenance for all our services — updated every minute.
 
-## 👀Demo
+---
 
-My status page (Online demo): https://uptimeflare.pages.dev/
+## ✨ Features
 
-Some screenshots:
+- **Real-time monitoring** — HTTP, HTTPS, TCP, ICMP checks every minute
+- **Global edge network** — Powered by Cloudflare Workers, deployed to 300+ locations worldwide
+- **Incident history** — Full timeline of past incidents and maintenance windows
+- **Instant notifications** — Telegram, Slack, Discord, Email, and Webhook alerts
+- **Custom status badges** — Embeddable SVG badges for your README or website
+- **Multi-language support** — English, Chinese, and more
+- **100% serverless** — No servers to manage, no monthly hosting costs
 
-![Desktop, Light theme](docs/desktop.png)
+---
 
-## ⚡Quickstart / 📄Documentation
+## 🔍 Keywords
 
-Please refer to [Wiki](https://github.com/lyc8503/UptimeFlare/wiki)
+`komestudio status` · `komestudio uptime` · `komestudio down` · `is komestudio down`  
+`kamimachine status` · `kamimachine uptime` · `kamimachine down` · `is kamimachine down`  
+`komestudio service status` · `kamimachine incident report` · `status page` · `uptime monitor`
 
-## 🚀Upgrade existing deployments
+---
 
-Get the latest features right away with [simple upgrade process](https://github.com/lyc8503/UptimeFlare/wiki/Synchronize-updates-from-upstream)
+## 🛠️ Tech Stack
 
-## ⚙️Docs for developer
+| Layer | Technology |
+|---|---|
+| Frontend | Next.js 14, React, TypeScript, TailwindCSS |
+| Backend | Cloudflare Workers |
+| Storage | Cloudflare KV |
+| Monitoring Engine | [UptimeFlare](https://github.com/lyc8503/UptimeFlare) |
+| CI/CD | GitHub Actions |
+| Hosting | Cloudflare Pages + Workers |
 
-To contribute new features or customize your deployment furthermore, see [here](https://github.com/lyc8503/UptimeFlare/wiki/How-to-develop).
+---
 
-## New features (TODOs)
+## 🚀 Deployment
 
-- [x] Specify region for monitors
-- [x] TCP `opened` promise
-- [x] Use apprise to support various notification channels
-- [x] ~~Telegram example~~
-- [x] ~~[Bark](https://bark.day.app) example~~
-- [x] ~~Email notification via Cloudflare Email Workers~~
-- [x] Improve docs by providing simple examples
-- [x] Notification grace period
-- [ ] SSL certificate checks
-- [x] ~~Self-host Dockerfile~~
-- [x] Incident history
-- [x] Improve `checkLocationWorkerRoute` and fix possible `proxy failed`
-- [x] Groups
-- [x] Remove old incidents
-- [x] ~~Known issue~~: `fetch` doesn't support non-standard port (resolved after CF update)
-- [x] Compatibility date update
-- [x] Scheduled Maintenance
-- [x] Add docs for dev
-- [x] Migration to Terraform Cloudflare provider version 5.x
-- [x] Cloudflare D1 database
-- [x] Scheduled maintenances (via IIFE)
-- [x] Simpler config example
-- [x] Upcoming maintenances
-- [x] Universal Webhook upgrade
-- [x] i18n...? (maybe)
-- [ ] ICMP via proxy?
-- [x] Add default UA
-- [x] Customizable footer
-- [x] New header logo
-- [x] Improve CPU time usage
-- [x] Local deployment (docs WIP)
+This repo is auto-deployed via GitHub Actions on every push to `main`.
+
+### Prerequisites
+
+- Cloudflare account (free tier is enough)
+- GitHub account
+- Cloudflare API Token with `Edit Cloudflare Workers` permission
+
+### Setup
+
+1. **Fork / Use this template** on GitHub
+2. **Add repository secret**: `CLOUDFLARE_API_TOKEN`
+3. **Edit `uptime.config.ts`** to add your monitors
+4. **Push to `main`** — GitHub Actions handles the rest
+
+For detailed setup instructions, see the [UptimeFlare documentation](https://github.com/lyc8503/UptimeFlare).
+
+---
+
+## 📊 Monitored Services
+
+### KomeStudio (`komestudio.com`)
+
+- Main website — `https://komestudio.com`
+- Blog endpoint — `https://blog.komestudio.com`
+- CDN / assets — `https://www.komestudio.com`
+
+### KamiMachine (`kamimachine.com`)
+
+- Main website — `https://kamimachine.com`
+- Blog endpoint — `https://blog.kamimachine.com`
+- CDN / assets — `https://www.kamimachine.com`
+
+---
+
+## 🔔 Subscribe to Updates
+
+- **RSS feed**: `/feed.xml` (nếu bật)
+- **Email alerts**: Đăng ký qua trang status
+- **Telegram**: [@komestudio_status](https://t.me/komestudio_status) *(placeholder)*
+
+---
+
+## 📄 License
+
+This project is built on top of [UptimeFlare](https://github.com/lyc8503/UptimeFlare), which is licensed under the MIT License.
+
+Status page content, configuration, and branding for **KomeStudio** and **KamiMachine** are © KomeStudio / KamiMachine. All rights reserved.
+
+---
+
+## 🙏 Credits
+
+- Monitoring engine: [UptimeFlare](https://github.com/lyc8503/UptimeFlare)
+
+---
+
+<p align="center">
+  <strong>KomeStudio</strong> · <a href="https://komestudio.com">komestudio.com</a> &nbsp;|&nbsp;
+  <strong>KamiMachine</strong> · <a href="https://kamimachine.com">kamimachine.com</a>
+</p>
