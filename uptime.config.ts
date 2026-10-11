@@ -11,9 +11,9 @@ const pageConfig: PageConfig = {
   // Links shown at the header of your status page, could set `highlight` to `true`
   links: [
     { link: 'https://kamimachine.com', label: 'Kami Machine', highlight: true },
-    { link: 'https://komestudio.com/', label: 'Kome Studio' },
+    { link: 'https://komestudio.com', label: 'Kome Studio' },
     { link: 'https://kome.top', label: 'Kome.Top' },
-    { link: 'https://komeverse.com/', label: 'KomeVerse' },
+    { link: 'https://komeverse.com', label: 'KomeVerse' },
     { link: 'mailto:hi@kamimachine.com', label: 'Email Me', highlight: true },
   ],
 }
