@@ -154,11 +154,11 @@ const workerConfig: WorkerConfig = {
 const maintenances: MaintenanceConfig[] = [
   {
     // [Optional] Monitor IDs to be affected by this maintenance
-    monitors: ['komestudio', 'bar_monitor'],
+    monitors: ['kometop', 'kometop'],
     // [Optional] default to "Scheduled Maintenance" if not specified
-    title: 'Test Maintenance',
+    title: 'Maintenance',
     // Description of the maintenance, will be shown at status page
-    body: 'This is a test maintenance, server software upgrade',
+    body: 'server software upgrade',
     // Start time of the maintenance, in UNIX timestamp or ISO 8601 format
     start: '2020-01-01T00:00:00+08:00',
     // [Optional] end time of the maintenance, in UNIX timestamp or ISO 8601 format
