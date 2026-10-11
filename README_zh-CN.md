@@ -113,8 +113,7 @@
 
 ## 🙏 致谢
 
-- 监控引擎：[UptimeFlare](https://github.com/lyc8503/UptimeFlare)，作者 [@lyc8503](https://github.com/lyc8503)
-- 托管服务：[Cloudflare Workers & Pages](https://workers.cloudflare.com/)
+- 监控引擎：[UptimeFlare](https://github.com/lyc8503/UptimeFlare)
 
 ---
 
