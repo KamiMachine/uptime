@@ -12,6 +12,17 @@ export interface Env {
 }
 
 const Worker = {
+  async fetch(request, env, ctx) {
+    return new Response(
+      "UptimeFlare Worker is running. Scheduled checks run every minute.",
+      {
+        status: 200,
+        headers: {
+          "Content-Type": "text/plain; charset=utf-8",
+        },
+      }
+    );
+  },
   async scheduled(event: ScheduledEvent, env: Env, ctx: ExecutionContext): Promise<void> {
     const workerLocation = (await getWorkerLocation()) || 'ERROR'
     console.log(`Running scheduled event on ${workerLocation}...`)
