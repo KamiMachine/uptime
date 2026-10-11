@@ -14,7 +14,7 @@ const pageConfig: PageConfig = {
     { link: 'https://komestudio.com', label: 'Kome Studio' },
     { link: 'https://kome.top', label: 'Kome.Top' },
     { link: 'https://komeverse.com', label: 'KomeVerse' },
-    { link: 'mailto:hi@kamimachine.com', label: 'Email Me', highlight: true },
+    // { link: 'mailto:hi@kamimachine.com', label: 'Email Me', highlight: true },
   ],
 }
 
@@ -30,11 +30,11 @@ const workerConfig: WorkerConfig = {
       // `method` should be a valid HTTP Method
       method: 'GET',
       // `target` is a valid URL
-      target: 'https://example.com',
+      target: 'https://komestudio.com',
       // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip
-      tooltip: 'This is a tooltip for this monitor',
+      tooltip: 'Kome Studio',
       // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
-      statusPageLink: 'https://example.com',
+      statusPageLink: 'https://komestudio.com',
       // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
       expectedCodes: [200],
       // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
@@ -66,7 +66,7 @@ const workerConfig: WorkerConfig = {
       // `target` should be `host:port` for tcp monitors
       target: '1.2.3.4:22',
       tooltip: 'My production server SSH',
-      statusPageLink: 'https://example.com',
+      statusPageLink: 'https://kamimachine.com',
       timeout: 5000,
     },
   ],
