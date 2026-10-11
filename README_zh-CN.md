@@ -97,9 +97,9 @@
 
 ## 🔔 订阅更新
 
-- **RSS 订阅**：`/feed.xml`（如已启用）
+- **RSS 订阅**：`/feed.xml`
 - **邮件通知**：通过状态页订阅
-- **Telegram**：[@komestudio_status](https://t.me/komestudio_status) *（占位符）*
+- **Telegram**：[@komestudio](https://t.me/komestudio)
 
 ---
 
