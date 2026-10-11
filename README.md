@@ -97,9 +97,9 @@ For detailed setup instructions, see the [UptimeFlare documentation](https://git
 
 ## 🔔 Subscribe to Updates
 
-- **RSS feed**: `/feed.xml` (nếu bật)
+- **RSS feed**: `/feed.xml`
 - **Email alerts**: Đăng ký qua trang status
-- **Telegram**: [@komestudio_status](https://t.me/komestudio_status) *(placeholder)*
+- **Telegram**: [@komestudio](https://t.me/komestudio) *(placeholder)*
 
 ---
 
