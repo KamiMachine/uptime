@@ -17,7 +17,7 @@ const pageConfig: PageConfig = {
     // { link: 'mailto:hi@kamimachine.com', label: 'Email Me', highlight: true },
   ],
   group: {
-    '🌐 Public (example group name)': ['komestudio', 'kamimachine', 'kometop'],
+    '🌐 Public': ['komestudio', 'kamimachine', 'kometop'],
     '🔐 Private': ['test_tcp_monitor'],
   },
   maintenances: {
