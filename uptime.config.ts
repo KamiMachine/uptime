@@ -85,7 +85,7 @@ const workerConfig: WorkerConfig = {
       name: 'Kome Top',
       method: 'GET',
       target: 'https://kome.top',
-      tooltip: 'Kami Machine',
+      tooltip: 'Kome Top',
       statusPageLink: 'https://kome.top',
       expectedCodes: [200],
       timeout: 10000,
