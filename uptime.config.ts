@@ -12,8 +12,8 @@ const pageConfig: PageConfig = {
   links: [
     { link: 'https://kamimachine.com', label: 'Kami Machine', highlight: true },
     { link: 'https://komestudio.com', label: 'Kome Studio' },
-    { link: 'https://kome.top', label: 'Kome.Top' },
-    { link: 'https://komeverse.com', label: 'KomeVerse' },
+    { link: 'https://kome.top', label: 'Kome Games' },
+    { link: 'https://komestudio.com/komeverse', label: 'KomeVerse' },
     // { link: 'mailto:hi@kamimachine.com', label: 'Email Me', highlight: true },
   ],
   group: {
@@ -82,10 +82,10 @@ const workerConfig: WorkerConfig = {
     },
     {
       id: 'kometop',
-      name: 'Kome Top',
+      name: 'Kome Games',
       method: 'GET',
       target: 'https://kome.top',
-      tooltip: 'Kome Top',
+      tooltip: 'Kome Games',
       statusPageLink: 'https://kome.top',
       expectedCodes: [200],
       timeout: 10000,
